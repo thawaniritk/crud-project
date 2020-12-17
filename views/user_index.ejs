@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+
+    <!-- <h1>  CRUD Operation using NodeJS / ExpressJS / MySQL  </h1> -->
+    <div class="container">
+        <h2>
+            <%= title %>
+        </h2>
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>first_name</th>
+                    <th>last_name</th>
+                    <th>email</th>
+                    <th>password</th>
+                    <th>phone</th>
+                    <th>code</th>
+                    <th>image</th>
+                    <th>user_id</th>
+                    <th>Action</th>
+                    <th>role_id</th>
+                    <th>name</th>
+                </tr>
+
+
+            </thead>
+            <tbody>
+                <%users.forEach(function(users){%>
+                    <tr>
+                        <td>
+                            <%= users.first_name %>
+                        </td>
+                        <td>
+                            <%= users.last_name %>
+                        </td>
+                        <td>
+                            <%= users.email %>
+                        </td>
+                        <td>
+                            <%= users.password %>
+                        </td>
+                        <td>
+                            <%= users.phone %>
+                        </td>
+                        <td>
+                            <%= users.code %>
+                        </td>
+                        <td>
+                            <%= users.image %>
+                        </td>
+                        <td>
+                            <%= users.user_id %>
+                        </td>
+                        <td>
+                            <button class="btn btn-sm btn-primary">Edit</button>
+                            <button class="btn btn-sm btn-danger">delete</button>
+                        </td>
+
+                    </tr>
+                    <% }); %>
+                        
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
